@@ -156,6 +156,7 @@
     "Label": "Developed in partnership with"
   },
   "BottomSheet": {
-    "Collapse": "Close"
+    "Collapse": "Close",
+    "OpenStatus": "Open Covid Shield status"
   }
 }
