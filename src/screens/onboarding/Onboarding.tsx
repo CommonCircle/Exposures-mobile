@@ -1,7 +1,7 @@
 import React, {useCallback, useRef, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {Box, Button, ProgressCircles, Header, LanguageToggle} from 'components';
-import {Dimensions, StyleSheet, LayoutChangeEvent, LayoutRectangle} from 'react-native';
+import {StyleSheet, LayoutChangeEvent, LayoutRectangle} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Carousel, {CarouselStatic} from 'react-native-snap-carousel';
 import {useStorage} from 'services/StorageService';
