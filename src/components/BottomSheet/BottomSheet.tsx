@@ -1,43 +1,16 @@
 import React, {useState, useCallback, useRef} from 'react';
-import {View, StyleSheet, TouchableHighlight, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {useSafeArea} from 'react-native-safe-area-context';
 import BottomSheetRaw from 'reanimated-bottom-sheet';
 import {useI18n} from '@shopify/react-i18n';
 
-import {Box} from './Box';
-import {Icon} from './Icon';
+import {Box} from '../Box';
+import {Icon} from '../Icon';
+
+import {SheetContentsContainer} from './SheetContentsContainer';
 
 const {abs, sub, pow} = Animated;
-
-interface ContentProps {
-  isExpanded: boolean;
-  toggleExpanded: () => void;
-  children?: React.ReactElement;
-}
-
-const SheetContentsContainer = ({children, isExpanded, toggleExpanded}: ContentProps) => {
-  const [i18n] = useI18n();
-  const content = (
-    <Box backgroundColor="overlayBackground" minHeight="100%">
-      <Box marginTop="l">{children}</Box>
-    </Box>
-  );
-
-  if (isExpanded) {
-    return content;
-  }
-
-  return (
-    <TouchableHighlight
-      onPress={toggleExpanded}
-      accessibilityRole="button"
-      accessibilityLabel={i18n.translate('BottomSheet.Collapse')}
-    >
-      {content}
-    </TouchableHighlight>
-  );
-};
 
 export interface BottomSheetProps {
   collapsedContent?: React.ReactElement;
@@ -48,7 +21,7 @@ export interface BottomSheetProps {
 const SNAP_POINTS = ['100%', '20%'];
 const SNAP_POINTS_LARGE = ['100%', '30%'];
 
-export const BottomSheet = ({children, collapsedContent, extraContent}: BottomSheetProps) => {
+const BottomSheet = ({children, collapsedContent, extraContent}: BottomSheetProps) => {
   const bottomSheetPosition = useRef(new Animated.Value(1));
   const bottomSheetRef: React.Ref<BottomSheetRaw> = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -146,3 +119,5 @@ const styles = StyleSheet.create({
     marginBottom: -18,
   },
 });
+
+export default BottomSheet;
