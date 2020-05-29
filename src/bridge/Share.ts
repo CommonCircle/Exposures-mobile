@@ -8,7 +8,7 @@ const RNShare = NativeModules.RNShare;
 
 const queries = Platform.select({
   ios: {
-    instagram: 'instagram://',
+    instagram: 'instagram://app',
   },
   android: {
     instagram: 'com.instagram.android',
@@ -33,7 +33,6 @@ const isAvailableiOS = async (platform: ShareablePlatform) => {
 const isAvailableAndroid = async (platform: ShareablePlatform) => {
   try {
     const target: string | undefined = queries![platform];
-
     const status = await Share.isPackageInstalled(target!);
     return (status as {isInstalled: boolean; message: string}).isInstalled;
   } catch (error) {
