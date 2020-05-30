@@ -20,7 +20,7 @@ export const palette = {
   brandGreen: '#333000',
   lightBlue: '#CCEFFF',
   neutralGrey: '#F4F4F4',
-  darkGrey: '#cecece',
+  darkGrey: '#303030',
   fadedYellow: '#FFF5D9',
 };
 
@@ -180,6 +180,9 @@ const darkTheme = {
     ...lightTheme.colors,
     mainBackground: palette.black,
     overlayBackground: palette.bodyBlack,
+    infoBlockNeutralBackground: palette.darkGrey,
+    overlayBodyText: palette.white,
+    bodyTextSubdued: palette.fadedTextWhite,
   },
 };
 
