@@ -10,11 +10,11 @@ export const getBackgroundI18n = async (forceLocale?: string) => {
       if (!ready) {
         return;
       }
-      const locale = forceLocale || storageService.locale.value;
+      const locale = forceLocale || storageService.locale.get();
       const i18nManager = new I18nManager({
         locale,
         onError(error) {
-          console.log(error.message);
+          console.log('>>> i18N', error);
         },
       });
       const translations = (locale: string) => LOCALES[locale];

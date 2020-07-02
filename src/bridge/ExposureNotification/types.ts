@@ -1,11 +1,3 @@
-/**
- * References
- * - Android: https://blog.google/documents/68/Android_Exposure_Notification_API_documentation_v1.2.pdf
- * - iOS: https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-FrameworkDocumentationv1.2.pdf
- */
-
-import {NativeModules} from 'react-native';
-
 export enum RiskLevel {
   Invalid = 0,
   Lowest = 1,
@@ -19,6 +11,8 @@ export enum RiskLevel {
 }
 
 export enum Status {
+  // .Undefined is made up status to indicate js client that status hasn't been received from EN framework
+  Undefined = 'undefined',
   Unknown = 'unknown',
   Active = 'active',
   Disabled = 'disabled',
@@ -28,9 +22,8 @@ export enum Status {
 
 export interface TemporaryExposureKey {
   keyData: string;
-  rollingStartNumber: number;
-  rollingDuration?: number;
-  rollingPeriod?: number;
+  rollingStartIntervalNumber: number;
+  rollingPeriod: number;
   transmissionRiskLevel: RiskLevel;
 }
 
@@ -71,7 +64,8 @@ export interface ExposureNotification {
   getTemporaryExposureKeyHistory(): Promise<TemporaryExposureKey[]>;
 
   detectExposure(configuration: ExposureConfiguration, diagnosisKeysURLs: string[]): Promise<ExposureSummary>;
-  getExposureInformation(summary: ExposureSummary): Promise<ExposureInformation[]>;
+  getExposureInformation(
+    summary: ExposureSummary,
+    userExplanation: string /* used only by iOS */,
+  ): Promise<ExposureInformation[]>;
 }
-
-export default NativeModules.ExposureNotification as ExposureNotification;

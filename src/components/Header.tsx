@@ -19,14 +19,18 @@ export const Header = ({isOverlay}: HeaderProps) => {
   }, [navigation]);
   return (
     <TouchableWithoutFeedback onPress={onLogoPress}>
-      <Box flexDirection="row" alignItems="center" justifyContent="center" marginBottom="l">
-        <Box marginHorizontal="s">
-          <Icon size={20} name="shield-covid" />
-        </Box>
-        <Text variant="homeHeader" color={isOverlay ? 'overlayBodyText' : 'bodyText'}>
-          {i18n.translate('Home.AppName')}
-        </Text>
-      </Box>
+    {
+      isOverlay
+        ? (
+          <Box flexDirection="row" alignItems="center" justifyContent="center" marginTop='-xl'>
+            <Icon size={116} name="cc-exposures-logo" />
+          </Box>
+        ) : (
+          <Box flexDirection="row" alignItems="center" justifyContent="center" marginVertical='-xl'>
+            <Icon size={116} name="cc-exposures-logo-white" />
+          </Box>
+        )
+    }
     </TouchableWithoutFeedback>
   );
 };

@@ -1,8 +1,9 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import {Observable} from 'shared/Observable';
 import {Region} from 'shared/Region';
+import {getSystemLocale} from 'locale';
 
-enum Key {
+export enum Key {
   IsOnboarded = 'IsOnboarded',
   Locale = 'Locale',
   Region = 'Region',
@@ -17,7 +18,7 @@ export class StorageService {
 
   constructor() {
     this.isOnboarding = new Observable<boolean>(true);
-    this.locale = new Observable<string>('en');
+    this.locale = new Observable<string>(getSystemLocale());
     this.ready = new Observable<boolean>(false);
     this.region = new Observable<Region | undefined>(undefined);
     this.init();
@@ -34,7 +35,7 @@ export class StorageService {
   };
 
   setRegion = async (value: Region | undefined) => {
-    await AsyncStorage.setItem(Key.Locale, value ? value : '');
+    await AsyncStorage.setItem(Key.Region, value ? value : '');
     this.region.set(value);
   };
 
@@ -42,7 +43,7 @@ export class StorageService {
     const isOnboarded = (await AsyncStorage.getItem(Key.IsOnboarded)) === '1';
     this.isOnboarding.set(!isOnboarded);
 
-    const locale = (await AsyncStorage.getItem(Key.Locale)) || this.locale.value;
+    const locale = (await AsyncStorage.getItem(Key.Locale)) || this.locale.get();
     this.locale.set(locale);
 
     const region = ((await AsyncStorage.getItem(Key.Region)) as Region | undefined) || undefined;

@@ -7,11 +7,9 @@ import {HomeScreen} from 'screens/home';
 import {TutorialScreen} from 'screens/tutorial';
 import {DataSharingScreen} from 'screens/datasharing';
 import {PrivacyScreen} from 'screens/privacy';
-import {SharingScreen} from 'screens/sharing';
 import {OnboardingScreen} from 'screens/onboarding';
 import {LanguageScreen} from 'screens/language';
 import {useStorage} from 'services/StorageService';
-import {RegionPickerScreen} from 'screens/regionPicker';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 enableScreens();
@@ -56,12 +54,10 @@ export interface MainStackParamList extends Record<string, object | undefined> {
 }
 
 const HomeScreenWithNavBar = withLightNav(HomeScreen);
-const RegionPickerScreenWithNavBar = withDarkNav(RegionPickerScreen);
 const OnboardingScreenWithNavBar = withDarkNav(OnboardingScreen);
 const TutorialScreenWithNavBar = withDarkNav(TutorialScreen);
 const DataSharingScreenWithNavBar = withDarkNav(DataSharingScreen);
 const PrivacyScreenWithNavBar = withDarkNav(PrivacyScreen);
-const SharingScreenWithNavBar = withDarkNav(SharingScreen);
 const LanguageScreenWithNavBar = withDarkNav(LanguageScreen);
 
 const DEFAULT_SCREEN_OPTIONS: NativeStackNavigationOptions = {
@@ -69,33 +65,18 @@ const DEFAULT_SCREEN_OPTIONS: NativeStackNavigationOptions = {
   headerShown: false,
 };
 
-const OnboardingStack = createNativeStackNavigator();
-const OnboardingNavigator = () => {
-  const {region} = useStorage();
-  return (
-    <OnboardingStack.Navigator
-      screenOptions={{stackAnimation: 'fade', headerShown: false}}
-      initialRouteName={region ? 'OnboardingTutorial' : 'RegionPicker'}
-    >
-      <OnboardingStack.Screen name="RegionPicker" component={RegionPickerScreenWithNavBar} />
-      <OnboardingStack.Screen name="OnboardingTutorial" component={OnboardingScreenWithNavBar} />
-    </OnboardingStack.Navigator>
-  );
-};
-
 const MainNavigator = () => {
   const {isOnboarding} = useStorage();
   return (
     <MainStack.Navigator
       screenOptions={DEFAULT_SCREEN_OPTIONS}
-      initialRouteName={isOnboarding ? 'OnboardingNavigator' : 'Home'}
+      initialRouteName={isOnboarding ? 'Onboarding' : 'Home'}
     >
       <MainStack.Screen name="Home" component={HomeScreenWithNavBar} />
-      <MainStack.Screen name="OnboardingNavigator" component={OnboardingNavigator} />
+      <MainStack.Screen name="Onboarding" component={OnboardingScreenWithNavBar} />
       <MainStack.Screen name="Tutorial" component={TutorialScreenWithNavBar} />
       <MainStack.Screen name="DataSharing" component={DataSharingScreenWithNavBar} />
       <MainStack.Screen name="Privacy" component={PrivacyScreenWithNavBar} />
-      <MainStack.Screen name="Sharing" component={SharingScreenWithNavBar} />
       <MainStack.Screen name="LanguageSelect" component={LanguageScreenWithNavBar} />
     </MainStack.Navigator>
   );

@@ -15,7 +15,7 @@ export const DiagnosedShareView = () => {
   const toDataShare = useCallback(() => navigation.navigate('DataSharing'), [navigation]);
 
   return (
-    <BaseHomeView animationSource={require('assets/animation/yellow-dot.json')}>
+    <BaseHomeView>
       <Text textAlign="center" variant="bodyTitle" color="bodyText" marginBottom="l" accessibilityRole="header">
         {i18n.translate('Home.DailyShare')}
       </Text>
@@ -23,7 +23,7 @@ export const DiagnosedShareView = () => {
         {i18n.translate('Home.DailyShareDetailed')}
       </Text>
       <Box alignSelf="stretch" marginBottom="s">
-        <Button text={i18n.translate('Home.ShareRandomIDsCTA')} variant="bigFlat" onPress={toDataShare} />
+        <Button text={i18n.translate('Home.ShareRandomIDsCTA')} variant="bigFlatWhite" onPress={toDataShare} />
       </Box>
       <Box alignSelf="stretch">
         <Button

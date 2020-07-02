@@ -3,22 +3,25 @@ import {Linking} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {Box, InfoBlock, BoxProps} from 'components';
 import {useI18n, I18n} from '@shopify/react-i18n';
-import {SystemStatus} from 'services/ExposureNotificationService';
+import {SystemStatus, useStartExposureNotificationService} from 'services/ExposureNotificationService';
 
 import {InfoShareView} from './InfoShareView';
 import {StatusHeaderView} from './StatusHeaderView';
 
 const SystemStatusOff = ({i18n}: {i18n: I18n}) => {
-  const toSettings = useCallback(() => {
-    Linking.openSettings();
-  }, []);
+  const startExposureNotificationService = useStartExposureNotificationService();
+
+  const enableExposureNotifications = useCallback(() => {
+    startExposureNotificationService();
+  }, [startExposureNotificationService]);
+
   return (
     <InfoBlock
       icon="icon-exposure-notifications-off"
       title={i18n.translate('OverlayOpen.ExposureNotificationCardStatus')}
       titleBolded={i18n.translate('OverlayOpen.ExposureNotificationCardStatusOff')}
       text={i18n.translate('OverlayOpen.ExposureNotificationCardBody')}
-      button={{text: i18n.translate('OverlayOpen.ExposureNotificationCardAction'), action: toSettings}}
+      button={{text: i18n.translate('OverlayOpen.ExposureNotificationCardAction'), action: enableExposureNotifications, variant: "bigFlatRed"}}
       backgroundColor="errorBackground"
       color="errorText"
     />
@@ -35,7 +38,7 @@ const BluetoothStatusOff = ({i18n}: {i18n: I18n}) => {
       title={i18n.translate('OverlayOpen.BluetoothCardStatus')}
       titleBolded={i18n.translate('OverlayOpen.BluetoothCardStatusOff')}
       text={i18n.translate('OverlayOpen.BluetoothCardBody')}
-      button={{text: i18n.translate('OverlayOpen.BluetoothCardAction'), action: toSettings}}
+      button={{text: i18n.translate('OverlayOpen.BluetoothCardAction'), action: toSettings, variant: "bigFlatRed"}}
       backgroundColor="errorBackground"
       color="errorText"
     />
@@ -49,7 +52,7 @@ const NotificationStatusOff = ({action, i18n}: {action: () => void; i18n: I18n})
       title={i18n.translate('OverlayOpen.NotificationCardStatus')}
       titleBolded={i18n.translate('OverlayOpen.NotificationCardStatusOff')}
       text={i18n.translate('OverlayOpen.NotificationCardBody')}
-      button={{text: i18n.translate('OverlayOpen.NotificationCardAction'), action}}
+      button={{text: i18n.translate('OverlayOpen.NotificationCardAction'), action, variant: "bigFlatWhiteOverlay"}}
       backgroundColor="infoBlockNeutralBackground"
       color="overlayBodyText"
     />
@@ -96,7 +99,8 @@ export const OverlayView = ({status, notificationWarning, turnNotificationsOn, m
             action: () => navigation.navigate('DataSharing'),
           }}
           backgroundColor="infoBlockBrightBackground"
-          color="infoBlockBrightText"
+          color="overlayBodyText"
+          iconColor="mainBackground"
         />
       </Box>
       <Box marginBottom="m" marginHorizontal="m">

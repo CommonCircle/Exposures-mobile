@@ -6,6 +6,7 @@ import {TemporaryExposureKey} from 'bridge/ExposureNotification';
 import nacl from 'tweetnacl';
 import {getRandomBytes, downloadDiagnosisKeysFile} from 'bridge/CovidShield';
 import {blobFetch} from 'shared/fetch';
+import {TRANSMISSION_RISK_LEVEL, REGION} from 'env';
 
 import {covidshield} from './covidshield';
 import {BackendInterface, SubmissionKeySet} from './types';
@@ -14,23 +15,24 @@ export class BackendService implements BackendInterface {
   retrieveUrl: string;
   submitUrl: string;
   hmacKey: string;
+  region: number;
 
-  constructor(retrieveUrl: string, submitUrl: string, hmacKey: string) {
+  constructor(retrieveUrl: string, submitUrl: string, hmacKey: string, region: number) {
     this.retrieveUrl = retrieveUrl;
     this.submitUrl = submitUrl;
     this.hmacKey = hmacKey;
+    this.region = region;
   }
 
   async retrieveDiagnosisKeys(period: number) {
-    const message = `${period}:${Math.floor(new Date().getTime() / 1000 / 3600)}`;
+    const message = `${this.region}:${period}:${Math.floor(Date.now() / 1000 / 3600)}`;
     const hmac = hmac256(message, encHex.parse(this.hmacKey)).toString(encHex);
-
-    return downloadDiagnosisKeysFile(`${this.retrieveUrl}/retrieve/${period}/${hmac}`);
+    const url = `${this.retrieveUrl}/retrieve/${this.region}/${period}/${hmac}`;
+    return downloadDiagnosisKeysFile(url);
   }
 
   async getExposureConfiguration() {
-    const region = 'ON';
-    return (await fetch(`${this.retrieveUrl}/exposure-configuration/${region}.json`)).json();
+    return (await fetch(`${this.retrieveUrl}/exposure-configuration/${REGION}.json`)).json();
   }
 
   async claimOneTimeCode(oneTimeCode: string): Promise<SubmissionKeySet> {
@@ -62,13 +64,14 @@ export class BackendService implements BackendInterface {
       keys: exposureKeys.map(key =>
         covidshield.TemporaryExposureKey.create({
           keyData: Buffer.from(key.keyData, 'base64'),
-          rollingStartIntervalNumber: key.rollingStartNumber,
-          transmissionRiskLevel: key.transmissionRiskLevel,
+          transmissionRiskLevel:
+            TRANSMISSION_RISK_LEVEL ||
+            key.transmissionRiskLevel /* See transmissionRiskLevel https://developers.google.com/android/exposure-notifications/exposure-notifications-api#temporaryexposurekey */,
+          rollingStartIntervalNumber: key.rollingStartIntervalNumber,
           rollingPeriod: key.rollingPeriod,
         }),
       ),
     });
-    console.log({upload: JSON.stringify(upload)});
 
     const serializedUpload = covidshield.Upload.encode(upload).finish();
 

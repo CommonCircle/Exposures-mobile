@@ -16,6 +16,12 @@ export const RETRIEVE_URL = Config.RETRIEVE_URL;
 
 export const HMAC_KEY = Config.HMAC_KEY;
 
+export const REGION = parseInt(Config.REGION, 10);
+
+export const TRANSMISSION_RISK_LEVEL = parseInt(Config.TRANSMISSION_RISK_LEVEL, 10);
+
+export const MINIMUM_FETCH_INTERVAL = parseInt(Config.MINIMUM_FETCH_INTERVAL, 10);
+
 export const TEST_MODE = Config.TEST_MODE === 'true' || false;
 
 export const MOCK_SERVER = Config.MOCK_SERVER === 'true' || false;

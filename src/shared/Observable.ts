@@ -67,7 +67,7 @@ class Subscriptions<T> {
       this.subscriptions.push(sub);
     } else {
       // it is okay to store insertion in the same list as deletion
-      // since we always push back, insertion will always preceed deletion.
+      // since we always push back, insertion will always precede deletion.
       this.state.cycleEndActions.push(() => this.subscriptions.push(sub));
     }
   }
@@ -82,8 +82,8 @@ class Subscriptions<T> {
 }
 
 export class Observable<T> {
-  value: T;
-  subscriptions: Subscriptions<T> = new Subscriptions();
+  private value: T;
+  private subscriptions: Subscriptions<T> = new Subscriptions();
 
   constructor(defaultValue: T) {
     this.value = defaultValue;
@@ -100,5 +100,11 @@ export class Observable<T> {
 
   observe(cb: (value: T) => void): () => void {
     return this.subscriptions.add(cb);
+  }
+}
+
+export class MapObservable<T> extends Observable<T> {
+  append(partial: Partial<T>) {
+    this.set({...this.get(), ...partial});
   }
 }

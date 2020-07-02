@@ -1,8 +1,10 @@
-import React, {createContext, useCallback, useContext, useEffect, useState, useMemo} from 'react';
+import React, {createContext, useCallback, useContext, useEffect, useMemo, useState} from 'react';
+import AsyncStorage from '@react-native-community/async-storage';
 import {useI18n} from '@shopify/react-i18n';
 import ExposureNotification, {Status as SystemStatus} from 'bridge/ExposureNotification';
-import AsyncStorage from '@react-native-community/async-storage';
+import {AppState, AppStateStatus} from 'react-native';
 import SecureStorage from 'react-native-sensitive-info';
+import SystemSetting from 'react-native-system-setting';
 
 import {BackendInterface} from '../BackendService';
 import {BackgroundScheduler} from '../BackgroundSchedulerService';
@@ -38,12 +40,12 @@ export const ExposureNotificationServiceProvider = ({
     () =>
       new ExposureNotificationService(
         backendInterface,
-        i18n.translate,
+        i18n,
         storage || AsyncStorage,
         secureStorage || SecureStorage,
         exposureNotification || ExposureNotification,
       ),
-    [backendInterface, exposureNotification, i18n.translate, secureStorage, storage],
+    [backendInterface, exposureNotification, i18n, secureStorage, storage],
   );
 
   useEffect(() => {
@@ -59,18 +61,20 @@ export const ExposureNotificationServiceProvider = ({
   );
 };
 
-export function useStartENSystem(): () => void {
-  const exposureNotificationService = useContext(ExposureNotificationServiceContext)!;
-  return useCallback(() => {
-    if (!exposureNotificationService.started) {
-      exposureNotificationService.start();
-    }
+export function useExposureNotificationService() {
+  return useContext(ExposureNotificationServiceContext)!;
+}
+
+export function useStartExposureNotificationService(): () => Promise<void> {
+  const exposureNotificationService = useExposureNotificationService();
+  return useCallback(async () => {
+    await exposureNotificationService.start();
   }, [exposureNotificationService]);
 }
 
 export function useSystemStatus(): [SystemStatus, () => void] {
-  const exposureNotificationService = useContext(ExposureNotificationServiceContext)!;
-  const [state, setState] = useState<SystemStatus>(exposureNotificationService.systemStatus.value);
+  const exposureNotificationService = useExposureNotificationService();
+  const [state, setState] = useState<SystemStatus>(exposureNotificationService.systemStatus.get());
   const update = useCallback(() => {
     exposureNotificationService.updateSystemStatus();
   }, [exposureNotificationService]);
@@ -85,8 +89,8 @@ export function useSystemStatus(): [SystemStatus, () => void] {
 }
 
 export function useExposureStatus(): [ExposureStatus, () => void] {
-  const exposureNotificationService = useContext(ExposureNotificationServiceContext)!;
-  const [state, setState] = useState<ExposureStatus>(exposureNotificationService.exposureStatus.value);
+  const exposureNotificationService = useExposureNotificationService();
+  const [state, setState] = useState<ExposureStatus>(exposureNotificationService.exposureStatus.get());
   const update = useCallback(() => {
     exposureNotificationService.updateExposureStatus();
   }, [exposureNotificationService]);
@@ -99,7 +103,7 @@ export function useExposureStatus(): [ExposureStatus, () => void] {
 }
 
 export function useReportDiagnosis() {
-  const exposureNotificationService = useContext(ExposureNotificationServiceContext)!;
+  const exposureNotificationService = useExposureNotificationService();
   const startSubmission = useCallback(
     (oneTimeCode: string) => {
       return exposureNotificationService.startKeysSubmission(oneTimeCode);
@@ -113,4 +117,26 @@ export function useReportDiagnosis() {
     startSubmission,
     fetchAndSubmitKeys,
   };
+}
+
+export function useExposureNotificationSystemStatusAutomaticUpdater() {
+  const exposureNotificationService = useExposureNotificationService();
+  return useCallback(() => {
+    const updateStatus = async (newState: AppStateStatus) => {
+      if (newState === 'active') {
+        await exposureNotificationService.updateSystemStatus();
+        await exposureNotificationService.updateExposureStatus();
+      }
+    };
+    AppState.addEventListener('change', updateStatus);
+
+    const bluetoothListenerPromise = SystemSetting.addBluetoothListener(() => {
+      exposureNotificationService.updateSystemStatus();
+    });
+
+    return () => {
+      AppState.removeEventListener('change', updateStatus);
+      bluetoothListenerPromise.then(listener => listener.remove()).catch(() => {});
+    };
+  }, [exposureNotificationService]);
 }

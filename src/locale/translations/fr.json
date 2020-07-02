@@ -55,6 +55,9 @@
     "EnterCodeCardTitle": "Code COVID Shield",
     "EnterCodeCardBody": "Un professionel de la santé vous a-t-il demandé d'entrer un code COVID Shield?",
     "EnterCodeCardAction": "Entrez le code",
+    "ShareIDsCardTitle": "Help to slow the spread",
+    "ShareIDsCardBody": "Share your random IDs to help others know if they have possibly been exposed to COVID-19.",
+    "ShareIDsCardAction": "Share",
     "NotificationCardStatus": "Les notifications poussées sont ",
     "NotificationCardStatusOff": "DÉSACTIVÉES",
     "NotificationCardBody": "Vous ne recevrez pas de notifications poussées si vous avez possiblement été exposé(e) à la COVID-19. Les notifications spontanées sont importantes pour aider à ralentir la transmission de la COVID-19.",
@@ -66,7 +69,7 @@
   },
   "Info": {
     "CheckSymptoms": "Vérifier vos symptômes",
-    "SymptomsUrl": "https://ca.thrive.health/covid19/fr",
+    "SymptomsUrl": "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html",
     "TellAFriend": "Partager l'application",
     "LearnMore": "Comment fonctionne COVID Shield",
     "ChangeLanguage": "Changer de langue",
@@ -101,6 +104,7 @@
     "Platform-instagram": "Partager avec Instagram",
     "More": "Plus d'applications",
     "Message": "Joignez-vous à moi pour aider à ralentir la transmission de la COVID-19. Téléchargez l'application COVID Shield : https://covidshield.app",
+    "InstagramImageUrl": "https://user-images.githubusercontent.com/5274722/84658989-b9ba6b00-aee4-11ea-84d4-d840527467b4.png",
     "Close": "Fermer"
   },
   "Onboarding": {
@@ -133,6 +137,7 @@
     "Cancel": "Annuler",
     "FormIntro": "Entrez votre code COVID Shield à 8 chiffres.",
     "Action": "Soumettre le code",
+    "InputLabel": "code Covid Shield",
     "InfoSmall": "Vos identifiants aléatoires ne seront pas partagés, à moins que vous donniez votre permission à l'étape suivante.",
     "ConsentTitle": "Partagez vos identifiants aléatoires",
     "ConsentBody": "Un professionnel de la santé vous a autorisé à partager les identifiants aléatoires conservés sur votre téléphone.",
@@ -143,7 +148,10 @@
     "ShareToast": "Identifiants aléatoires partagés avec succès",
     "ErrorTitle": "Code non reconnu",
     "ErrorBody": "Votre code COVID Shield n'a pas pu être reconnu. Essayez de nouveau.",
-    "ErrorAction": "OK"
+    "ErrorAction": "OK",
+    "PermissionsErrorTitle": "Loading error",
+    "PermissionsErrorBody": "A problem occurred while sharing your random IDs. Please try again.",
+    "PermissionsErrorAction": "OK"
   },
   "Notification": {
     "ExposedMessageTitle": "Vous avez possiblement été exposé(e)",
