@@ -1,5 +1,5 @@
 import React, {useCallback} from 'react';
-import {Linking} from 'react-native';
+import {Linking, StyleSheet} from 'react-native';
 import {useI18n} from '@shopify/react-i18n';
 import {Text, Button, Box, LastCheckedDisplay} from 'components';
 import {captureException} from 'shared/log';
@@ -13,6 +13,12 @@ export const ExposureView = () => {
   }, [i18n]);
   return (
     <BaseHomeView>
+      <Text textAlign="center" variant="bodyTitle" color="bodyText" marginBottom="l" accessibilityRole="header" style={styles.pilot_title}>
+        ***SIMULATION PILOT***
+      </Text>
+      <Text textAlign="center" variant="bodyTitle" color="bodyText" marginBottom="l" accessibilityRole="header" style={styles.pilot_title}>
+        <Text style={styles.underline}>NOT</Text> real medical information
+      </Text>
       <Text textAlign="center" variant="bodyTitle" color="bodyText" marginBottom="l" accessibilityRole="header">
         {i18n.translate('Home.ExposureDetected')}
         {/* No exposure detected */}
@@ -21,16 +27,31 @@ export const ExposureView = () => {
         {i18n.translate('Home.ExposureDetectedDetailed')}
       </Text>
       <LastCheckedDisplay />
-      <Box alignSelf="stretch" marginTop="l">
+      <Box alignSelf="stretch" marginTop="s" marginBottom="s">
         <Button text={'Complete the survey'} variant="bigFlatWhite" externalLink onPress={
           () => {
             Linking.openURL("https://redcap.iths.org/surveys/?s=HAR3L8AF9A").catch(err => console.error('An error occurred', err));
           }
         } />
       </Box>
-      <Box alignSelf="stretch" marginTop="l">
-        <Button text={i18n.translate('Home.SeeGuidance')} color="bodyText" variant="bigHollow" externalLink onPress={onAction} />
-      </Box>
+      <Text textAlign="center" variant="bodyTitle" color="bodyText" marginBottom="l" accessibilityRole="header" style={styles.pilot_title}>
+        ***SIMULATION PILOT***
+      </Text>
+      <Text textAlign="center" variant="bodyTitle" color="bodyText" marginBottom="l" accessibilityRole="header" style={styles.pilot_title}>
+        If questions about evaluation, please call:
+      </Text>
     </BaseHomeView>
   );
 };
+
+const styles = StyleSheet.create({
+  pilot_title: {
+    fontWeight: 'bold',
+    fontSize: 24,
+  },
+  underline: {
+    textDecorationLine: "underline",
+    textDecorationStyle: "solid",
+    textDecorationColor: 'white'
+  }
+});
