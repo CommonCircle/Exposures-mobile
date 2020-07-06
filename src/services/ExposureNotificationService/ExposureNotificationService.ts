@@ -3,7 +3,7 @@ import PushNotification from 'bridge/PushNotification';
 import {addDays, daysBetween, periodSinceEpoch} from 'shared/date-fns';
 import {I18n} from '@shopify/react-i18n';
 import {Observable, MapObservable} from 'shared/Observable';
-
+import Analytics from 'appcenter-analytics';
 import {BackendInterface, SubmissionKeySet} from '../BackendService';
 
 const SUBMISSION_AUTH_KEYS = 'submissionAuthKeys';
@@ -134,6 +134,7 @@ export class ExposureNotificationService {
         alertTitle: this.i18n.translate('Notification.ExposedMessageTitle'),
         alertBody: this.i18n.translate('Notification.ExposedMessageBody'),
       });
+
     }
     if (currentStatus.type === 'diagnosed' && currentStatus.needsSubmission) {
       PushNotification.presentLocalNotification({
@@ -141,6 +142,7 @@ export class ExposureNotificationService {
         alertBody: this.i18n.translate('Notification.DailyUploadNotificationBody'),
       });
     }
+    Analytics.trackEvent('Status udpated', { Status: JSON.stringify(currentStatus) });
   }
 
   async updateExposureStatus(): Promise<void> {
