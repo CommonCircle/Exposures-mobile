@@ -27,7 +27,7 @@ export const EXPOSURE_STATUS = 'exposureStatus';
 
 export const HOURS_PER_PERIOD = 24;
 
-export const EXPOSURE_NOTIFICATION_CYCLE = 14;
+export const EXPOSURE_NOTIFICATION_CYCLE = 1;
 
 export {SystemStatus};
 

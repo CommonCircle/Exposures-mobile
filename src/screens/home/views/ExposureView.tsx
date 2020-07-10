@@ -38,7 +38,7 @@ export const ExposureView = () => {
         ***SIMULATION PILOT***
       </Text>
       <Text textAlign="center" variant="bodyTitle" color="bodyText" marginBottom="l" accessibilityRole="header" style={styles.pilot_title}>
-        If questions about evaluation, please call:
+        If questions about evaluation, please call: 206-616-0454
       </Text>
     </BaseHomeView>
   );
