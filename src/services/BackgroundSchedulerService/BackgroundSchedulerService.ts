@@ -16,6 +16,7 @@ const registerPeriodicTask = async (task: PeriodicTask) => {
       enableHeadless: true,
       startOnBoot: true,
       stopOnTerminate: false,
+      forceAlarmManager: true,
     },
     async taskId => {
       captureMessage('runPeriodicTask', {taskId});
