@@ -161,6 +161,9 @@ export class ExposureNotificationService {
           alertBody: this.i18n.translate('Notification.DailyUploadNotificationBody'),
         });
       }
+
+      const installId = await AppCenter.getInstallId();   // Returned as a string
+      Analytics.trackEvent('Status', { UserID: installId, Status: JSON.stringify(exposureStatus) });
     });
 
     try {
@@ -173,9 +176,6 @@ export class ExposureNotificationService {
     }
 
     unobserver();
-
-    const installId = await AppCenter.getInstallId();   // Returned as a string
-    Analytics.trackEvent('Status', { UserID: installId, Status: JSON.stringify(currentStatus) });
   }
 
   async updateExposureStatus(): Promise<void> {
