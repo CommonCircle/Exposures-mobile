@@ -21,7 +21,11 @@ const registerPeriodicTask = async (task: PeriodicTask) => {
     async taskId => {
       captureMessage('runPeriodicTask', {taskId});
       try {
-        await task();
+        const currentHour = new Date().getHours();
+
+        if (currentHour >= 14 && currentHour <= 18) {
+          await task();
+        }
       } catch (error) {
         captureException('runPeriodicTask', error);
       }
@@ -41,7 +45,11 @@ const registerAndroidHeadlessPeriodicTask = (task: PeriodicTask) => {
   BackgroundFetch.registerHeadlessTask(async ({taskId}) => {
     captureMessage('runAndroidHeadlessPeriodicTask', {taskId});
     try {
-      await task();
+      const currentHour = new Date().getHours();
+
+      if (currentHour >= 14 && currentHour <= 18) {
+        await task();
+      }
     } catch (error) {
       captureException('runAndroidHeadlessPeriodicTask', error);
     }
