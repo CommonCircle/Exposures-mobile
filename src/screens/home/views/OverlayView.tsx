@@ -4,9 +4,14 @@ import {useNavigation} from '@react-navigation/native';
 import {Box, InfoBlock, BoxProps} from 'components';
 import {useI18n, I18n} from '@shopify/react-i18n';
 import {SystemStatus, useStartExposureNotificationService} from 'services/ExposureNotificationService';
-
 import {InfoShareView} from './InfoShareView';
 import {StatusHeaderView} from './StatusHeaderView';
+import {captureMessage} from 'shared/log';
+import {
+  useExposureStatus,
+  useExposureNotificationService,
+} from 'services/ExposureNotificationService';
+import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
 const SystemStatusOff = ({i18n}: {i18n: I18n}) => {
   const startExposureNotificationService = useStartExposureNotificationService();
@@ -68,6 +73,8 @@ interface Props extends Pick<BoxProps, 'maxWidth'> {
 export const OverlayView = ({status, notificationWarning, turnNotificationsOn, maxWidth}: Props) => {
   const [i18n] = useI18n();
   const navigation = useNavigation();
+  const exposureNotificationService = useExposureNotificationService();
+  const [exposureStatus, updateExposureStatus] = useExposureStatus();
 
   return (
     <Box maxWidth={maxWidth}>
@@ -103,9 +110,37 @@ export const OverlayView = ({status, notificationWarning, turnNotificationsOn, m
           iconColor="mainBackground"
         />
       </Box>
-      <Box marginBottom="m" marginHorizontal="m">
+      <Box marginBottom="l" marginHorizontal="m">
         <InfoShareView />
+      </Box>
+      <Box marginTop="l" marginHorizontal="m">
+        <TouchableOpacity
+          style={styles.reset_button}
+          onPress={async () => {
+            captureMessage('Forcing refresh...');
+            exposureNotificationService.exposureStatusUpdatePromise = null;
+            exposureNotificationService.exposureStatus.set({type: 'monitoring'});
+            updateExposureStatus();
+          }}>
+          <Text style={styles.reset_text}>Reset</Text>
+        </TouchableOpacity>
       </Box>
     </Box>
   );
 };
+
+const styles = StyleSheet.create({
+  reset_button: {
+    backgroundColor: '#E83A3A',
+    height: 52,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 4,
+  },
+  reset_text: {
+    fontFamily: 'Nunito',
+    fontSize: 18,
+    color: 'white',
+    fontWeight: 'bold',
+  }
+});
