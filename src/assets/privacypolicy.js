@@ -1,5 +1,7 @@
 const privacy = `# Privacy Policy
 
+CommonCircle is a phone application created to help COVID-19 efforts. This app can be used to help identify individuals that have been potentially exposed to COVID-19. This app may to help the contact tracing process by alerting users potentially infected by COVID19 to help them get appropriate follow up.
+
 CommonCircle has been designed with user privacy as the top priority. We must strike a balance between protecting public health and preserving personal privacy, and CommonCircle takes a privacy-first approach. The CommonCircle app is designed to make it as difficult as possible for CommonCircle or others to link the information you choose to provide to you or your device, and to use this information only to enable exposure notification in the midst of this unprecedented pandemic.
 
 ## What Information Do We Use?
