@@ -1,13 +1,15 @@
 import React, {useCallback} from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {ScrollView, StyleSheet, TouchableOpacity, Text as NativeText} from 'react-native';
+import {ScrollView, StyleSheet, TouchableOpacity, Text as NativeText, Linking} from 'react-native';
 import {Box, Text} from 'components';
 import {useI18n} from '@shopify/react-i18n';
 
 export const Permissions = () => {
   const [i18n] = useI18n();
   const navigation = useNavigation();
-  const onPrivacy = useCallback(() => navigation.navigate('Privacy'), [navigation]);
+  const onPrivacy = useCallback(() => {
+    Linking.openURL(i18n.translate('Info.PrivacyUrl')).catch(error => captureException('OpenUrl', error));
+  }, [i18n]);
 
   return (
     <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>

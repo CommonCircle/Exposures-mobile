@@ -32,7 +32,9 @@ export const InfoShareView = () => {
   const onSymptomps = useCallback(() => {
     Linking.openURL(i18n.translate('Info.SymptomsUrl')).catch(error => captureException('OpenUrl', error));
   }, [i18n]);
-  const onPrivacy = useCallback(() => navigation.navigate('Privacy'), [navigation]);
+  const onPrivacy = useCallback(() => {
+    Linking.openURL(i18n.translate('Info.PrivacyUrl')).catch(error => captureException('OpenUrl', error));
+  }, [i18n]);
   const onLearnMore = useCallback(() => navigation.navigate('Tutorial'), [navigation]);
   const onLanguage = useCallback(() => navigation.navigate('LanguageSelect'), [navigation]);
 

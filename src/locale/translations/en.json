@@ -70,6 +70,7 @@
   "Info": {
     "CheckSymptoms": "Symptom guidance from the CDC",
     "SymptomsUrl": "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html",
+    "PrivacyUrl": "https://commoncircle-portal.cs.washington.edu/privacy.md",
     "TellAFriend": "Share app",
     "LearnMore": "How CommonCircle works",
     "ChangeLanguage": "Change language",

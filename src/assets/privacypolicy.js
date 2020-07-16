@@ -33,7 +33,7 @@ Because we have no way to tie a Temporary Exposure Key or our Access Logs to you
 
 If you have any questions or complaints about CommonCircle’s privacy practices, you can email us at cmmncrcl@uw.edu.
 
-Last updated May 13, 2020
+Last updated July 16, 2020
 `;
 
 export default privacy;
