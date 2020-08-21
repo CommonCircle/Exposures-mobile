@@ -9,12 +9,8 @@ import {addDays, daysBetween, periodSinceEpoch} from 'shared/date-fns';
 import {I18n} from '@shopify/react-i18n';
 import {Observable, MapObservable} from 'shared/Observable';
 import Analytics from 'appcenter-analytics';
-<<<<<<< HEAD
-=======
 import AppCenter from 'appcenter';
->>>>>>> 23e5ccd3bc3766eeced6290fecaacb2eef21823a
 import {BackendInterface, SubmissionKeySet} from '../BackendService';
-
 import defaultExposureConfiguration from './DefaultExposureConfiguration.json';
 
 const SUBMISSION_AUTH_KEYS = 'submissionAuthKeys';
@@ -162,13 +158,9 @@ export class ExposureNotificationService {
         alertBody: this.i18n.translate('Notification.DailyUploadNotificationBody'),
       });
     }
-<<<<<<< HEAD
-    Analytics.trackEvent('Status udpated', { Status: JSON.stringify(currentStatus) });
-=======
 
     const installId = await AppCenter.getInstallId();   // Returned as a string
     Analytics.trackEvent('Status', { UserID: installId, Status: JSON.stringify(currentStatus) });
->>>>>>> 23e5ccd3bc3766eeced6290fecaacb2eef21823a
   }
 
   async updateExposureStatus(): Promise<void> {
@@ -345,8 +337,6 @@ export class ExposureNotificationService {
       } catch (error) {
         console.log('>>> DetectExposure', error);
       }
-    } catch (error) {
-      console.log('>>> detectExposure', error);
     }
 
     return finalize({}, lastCheckedPeriod);
