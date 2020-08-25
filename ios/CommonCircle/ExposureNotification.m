@@ -1,6 +1,6 @@
 //
 //  ExposureNotification.m
-//  CovidShield
+//  CommonCircle
 //
 //  Created by Sergey Gavrilyuk on 2020-05-03.
 //
@@ -126,11 +126,11 @@ RCT_REMAP_METHOD(detectExposure, detectExposureWithConfiguration:(NSDictionary *
   if (configDict[@"minimumRiskScore"]) {
     configuration.minimumRiskScore = [configDict[@"minimumRiskScore"] intValue];
   }
-  
+
   if (configDict[@"attenuationLevelValues"]) {
     configuration.attenuationLevelValues = mapIntValues(configDict[@"attenuationLevelValues"]);
   }
-  
+
   if (configDict[@"attenuationWeight"]) {
     configuration.attenuationWeight = [configDict[@"attenuationWeight"] doubleValue];
   }

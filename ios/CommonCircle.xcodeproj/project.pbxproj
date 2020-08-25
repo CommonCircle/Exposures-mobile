@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* CovidShieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CovidShieldTests.m */; };
+		00E356F31AD99517003FC87E /* CommonCircleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CommonCircleTests.m */; };
 		1328B72A4DDB4713970A0673 /* img_0.svg in Resources */ = {isa = PBXBuildFile; fileRef = FAA4C78E2EF7441687865846 /* img_0.svg */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		195904142488B84300430369 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195904162488B84300430369 /* Launch Screen.storyboard */; };
 		3E0E3459D94C4332856E0784 /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B6B2313DFFB46AE99F7DDCD /* Nunito.ttf */; };
-		7482404F246F9C0E009F68EA /* CovidShield.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482404E246F9C0E009F68EA /* CovidShield.m */; };
+		7482404F246F9C0E009F68EA /* CommonCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482404E246F9C0E009F68EA /* CommonCircle.m */; };
 		74B6941E245F15B20077B9DA /* ExposureNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B6941D245F15B20077B9DA /* ExposureNotification.m */; };
-		9DCF98527548A48AED34959C /* libPods-CovidShield-CovidShieldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A1C8C77A874BCC9042935F /* libPods-CovidShield-CovidShieldTests.a */; };
+		9DCF98527548A48AED34959C /* libPods-CommonCircle-CommonCircleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A1C8C77A874BCC9042935F /* libPods-CommonCircle-CommonCircleTests.a */; };
 		A10A691626414D8AABBB659C /* Device-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = 431D5AB0AA364B5C9E7BFF1D /* Device-Large.png */; };
-		BA054BD27C1A8657F6BF95BB /* libPods-CovidShield.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52445CBEB4F2B88669022976 /* libPods-CovidShield.a */; };
+		BA054BD27C1A8657F6BF95BB /* libPods-CommonCircle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52445CBEB4F2B88669022976 /* libPods-CommonCircle.a */; };
 		E0C908AD8D97409895BCF901 /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B4DC3E27534960AEAA5640 /* img_0.png */; };
 		FA02CBEB18514E9EBFD56EBD /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30410EF97217406AB84D48C6 /* Nunito-Bold.ttf */; };
 /* End PBXBuildFile section */
@@ -29,42 +29,42 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = CovidShield;
+			remoteInfo = CommonCircle;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* CovidShieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidShieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* CommonCircleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonCircleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* CovidShieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CovidShieldTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* CovidShield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidShield.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CovidShield/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CovidShield/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CovidShield/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CovidShield/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CovidShield/main.m; sourceTree = "<group>"; };
-		179621B4246C643100B9FC0D /* CovidShield.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = CovidShield.entitlements; path = CovidShield/CovidShield.entitlements; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* CommonCircleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonCircleTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* CommonCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CommonCircle/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CommonCircle/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CommonCircle/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CommonCircle/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CommonCircle/main.m; sourceTree = "<group>"; };
+		179621B4246C643100B9FC0D /* CommonCircle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = CommonCircle.entitlements; path = CommonCircle/CommonCircle.entitlements; sourceTree = "<group>"; };
 		195904152488B84300430369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		195904172488B85500430369 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "fr.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		195904192488B85E00430369 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
-		1A0CE02FD9160E9B9AF76381 /* Pods-CovidShield.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidShield.release.xcconfig"; path = "Target Support Files/Pods-CovidShield/Pods-CovidShield.release.xcconfig"; sourceTree = "<group>"; };
+		1A0CE02FD9160E9B9AF76381 /* Pods-CommonCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonCircle.release.xcconfig"; path = "Target Support Files/Pods-CommonCircle/Pods-CommonCircle.release.xcconfig"; sourceTree = "<group>"; };
 		30410EF97217406AB84D48C6 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../src/assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		431D5AB0AA364B5C9E7BFF1D /* Device-Large.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Device-Large.png"; path = "../src/assets/animation/images/Device-Large.png"; sourceTree = "<group>"; };
-		4340865F2E3AB248EDD2005B /* Pods-CovidShield-CovidShieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidShield-CovidShieldTests.release.xcconfig"; path = "Target Support Files/Pods-CovidShield-CovidShieldTests/Pods-CovidShield-CovidShieldTests.release.xcconfig"; sourceTree = "<group>"; };
-		52445CBEB4F2B88669022976 /* libPods-CovidShield.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CovidShield.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7482404D246F9C0E009F68EA /* CovidShield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CovidShield.h; path = CovidShield/CovidShield.h; sourceTree = "<group>"; };
-		7482404E246F9C0E009F68EA /* CovidShield.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CovidShield.m; path = CovidShield/CovidShield.m; sourceTree = "<group>"; };
+		4340865F2E3AB248EDD2005B /* Pods-CommonCircle-CommonCircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonCircle-CommonCircleTests.release.xcconfig"; path = "Target Support Files/Pods-CommonCircle-CommonCircleTests/Pods-CommonCircle-CommonCircleTests.release.xcconfig"; sourceTree = "<group>"; };
+		52445CBEB4F2B88669022976 /* libPods-CommonCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CommonCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7482404D246F9C0E009F68EA /* CommonCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommonCircle.h; path = CommonCircle/CommonCircle.h; sourceTree = "<group>"; };
+		7482404E246F9C0E009F68EA /* CommonCircle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CommonCircle.m; path = CommonCircle/CommonCircle.m; sourceTree = "<group>"; };
 		7482405524773294009F68EA /* Config.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.release.xcconfig; sourceTree = "<group>"; };
 		74824056247732A5009F68EA /* Config.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.debug.xcconfig; sourceTree = "<group>"; };
-		74B6941C245F15B20077B9DA /* ExposureNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ExposureNotification.h; path = CovidShield/ExposureNotification.h; sourceTree = "<group>"; };
-		74B6941D245F15B20077B9DA /* ExposureNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ExposureNotification.m; path = CovidShield/ExposureNotification.m; sourceTree = "<group>"; };
-		77A1C8C77A874BCC9042935F /* libPods-CovidShield-CovidShieldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CovidShield-CovidShieldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B6941C245F15B20077B9DA /* ExposureNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ExposureNotification.h; path = CommonCircle/ExposureNotification.h; sourceTree = "<group>"; };
+		74B6941D245F15B20077B9DA /* ExposureNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ExposureNotification.m; path = CommonCircle/ExposureNotification.m; sourceTree = "<group>"; };
+		77A1C8C77A874BCC9042935F /* libPods-CommonCircle-CommonCircleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CommonCircle-CommonCircleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B4DC3E27534960AEAA5640 /* img_0.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = img_0.png; path = ../src/assets/animation/images/img_0.png; sourceTree = "<group>"; };
 		9B6B2313DFFB46AE99F7DDCD /* Nunito.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Nunito.ttf; path = ../src/assets/fonts/Nunito.ttf; sourceTree = "<group>"; };
-		DB9A1444C934C41C93EB531F /* Pods-CovidShield.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidShield.debug.xcconfig"; path = "Target Support Files/Pods-CovidShield/Pods-CovidShield.debug.xcconfig"; sourceTree = "<group>"; };
+		DB9A1444C934C41C93EB531F /* Pods-CommonCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonCircle.debug.xcconfig"; path = "Target Support Files/Pods-CommonCircle/Pods-CommonCircle.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		FA11CCD8EB9EB39453E3C0AA /* Pods-CovidShield-CovidShieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidShield-CovidShieldTests.debug.xcconfig"; path = "Target Support Files/Pods-CovidShield-CovidShieldTests/Pods-CovidShield-CovidShieldTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA11CCD8EB9EB39453E3C0AA /* Pods-CommonCircle-CommonCircleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonCircle-CommonCircleTests.debug.xcconfig"; path = "Target Support Files/Pods-CommonCircle-CommonCircleTests/Pods-CommonCircle-CommonCircleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA4C78E2EF7441687865846 /* img_0.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = img_0.svg; path = ../src/assets/animation/images/img_0.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DCF98527548A48AED34959C /* libPods-CovidShield-CovidShieldTests.a in Frameworks */,
+				9DCF98527548A48AED34959C /* libPods-CommonCircle-CommonCircleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,20 +81,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA054BD27C1A8657F6BF95BB /* libPods-CovidShield.a in Frameworks */,
+				BA054BD27C1A8657F6BF95BB /* libPods-CommonCircle.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* CovidShieldTests */ = {
+		00E356EF1AD99517003FC87E /* CommonCircleTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* CovidShieldTests.m */,
+				00E356F21AD99517003FC87E /* CommonCircleTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = CovidShieldTests;
+			path = CommonCircleTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -105,10 +105,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* CovidShield */ = {
+		13B07FAE1A68108700A75B9A /* CommonCircle */ = {
 			isa = PBXGroup;
 			children = (
-				179621B4246C643100B9FC0D /* CovidShield.entitlements */,
+				179621B4246C643100B9FC0D /* CommonCircle.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -119,7 +119,7 @@
 				7482405524773294009F68EA /* Config.release.xcconfig */,
 				74824056247732A5009F68EA /* Config.debug.xcconfig */,
 			);
-			name = CovidShield;
+			name = CommonCircle;
 			sourceTree = "<group>";
 		};
 		230799A3CC6E45FCAF228799 /* Resources */ = {
@@ -138,8 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				52445CBEB4F2B88669022976 /* libPods-CovidShield.a */,
-				77A1C8C77A874BCC9042935F /* libPods-CovidShield-CovidShieldTests.a */,
+				52445CBEB4F2B88669022976 /* libPods-CommonCircle.a */,
+				77A1C8C77A874BCC9042935F /* libPods-CommonCircle-CommonCircleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,10 +147,10 @@
 		807ECFA983CE0C8C519844E4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DB9A1444C934C41C93EB531F /* Pods-CovidShield.debug.xcconfig */,
-				1A0CE02FD9160E9B9AF76381 /* Pods-CovidShield.release.xcconfig */,
-				FA11CCD8EB9EB39453E3C0AA /* Pods-CovidShield-CovidShieldTests.debug.xcconfig */,
-				4340865F2E3AB248EDD2005B /* Pods-CovidShield-CovidShieldTests.release.xcconfig */,
+				DB9A1444C934C41C93EB531F /* Pods-CommonCircle.debug.xcconfig */,
+				1A0CE02FD9160E9B9AF76381 /* Pods-CommonCircle.release.xcconfig */,
+				FA11CCD8EB9EB39453E3C0AA /* Pods-CommonCircle-CommonCircleTests.debug.xcconfig */,
+				4340865F2E3AB248EDD2005B /* Pods-CommonCircle-CommonCircleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -160,8 +160,8 @@
 			children = (
 				74B6941C245F15B20077B9DA /* ExposureNotification.h */,
 				74B6941D245F15B20077B9DA /* ExposureNotification.m */,
-				7482404D246F9C0E009F68EA /* CovidShield.h */,
-				7482404E246F9C0E009F68EA /* CovidShield.m */,
+				7482404D246F9C0E009F68EA /* CommonCircle.h */,
+				7482404E246F9C0E009F68EA /* CommonCircle.m */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -169,9 +169,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* CovidShield */,
+				13B07FAE1A68108700A75B9A /* CommonCircle */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* CovidShieldTests */,
+				00E356EF1AD99517003FC87E /* CommonCircleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				807ECFA983CE0C8C519844E4 /* Pods */,
@@ -185,8 +185,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* CovidShield.app */,
-				00E356EE1AD99517003FC87E /* CovidShieldTests.xctest */,
+				13B07F961A680F5B00A75B9A /* CommonCircle.app */,
+				00E356EE1AD99517003FC87E /* CommonCircleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* CovidShieldTests */ = {
+		00E356ED1AD99517003FC87E /* CommonCircleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CovidShieldTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CommonCircleTests" */;
 			buildPhases = (
 				31452B1ADB3776B36C665CB4 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -208,14 +208,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = CovidShieldTests;
-			productName = CovidShieldTests;
-			productReference = 00E356EE1AD99517003FC87E /* CovidShieldTests.xctest */;
+			name = CommonCircleTests;
+			productName = CommonCircleTests;
+			productReference = 00E356EE1AD99517003FC87E /* CommonCircleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* CovidShield */ = {
+		13B07F861A680F5B00A75B9A /* CommonCircle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CovidShield" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CommonCircle" */;
 			buildPhases = (
 				2CF09B024003DB90CDBA2FC5 /* [CP] Check Pods Manifest.lock */,
 				748240532477265C009F68EA /* Install env config */,
@@ -229,9 +229,9 @@
 			);
 			dependencies = (
 			);
-			name = CovidShield;
-			productName = CovidShield;
-			productReference = 13B07F961A680F5B00A75B9A /* CovidShield.app */;
+			name = CommonCircle;
+			productName = CommonCircle;
+			productReference = 13B07F961A680F5B00A75B9A /* CommonCircle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +261,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CovidShield" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CommonCircle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -275,8 +275,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* CovidShield */,
-				00E356ED1AD99517003FC87E /* CovidShieldTests */,
+				13B07F861A680F5B00A75B9A /* CommonCircle */,
+				00E356ED1AD99517003FC87E /* CommonCircleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -335,7 +335,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CovidShield-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CommonCircle-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -357,7 +357,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CovidShield-CovidShieldTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CommonCircle-CommonCircleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -408,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* CovidShieldTests.m in Sources */,
+				00E356F31AD99517003FC87E /* CommonCircleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +418,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				7482404F246F9C0E009F68EA /* CovidShield.m in Sources */,
+				7482404F246F9C0E009F68EA /* CommonCircle.m in Sources */,
 				74B6941E245F15B20077B9DA /* ExposureNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +428,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* CovidShield */;
+			target = 13B07F861A680F5B00A75B9A /* CommonCircle */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -449,14 +449,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA11CCD8EB9EB39453E3C0AA /* Pods-CovidShield-CovidShieldTests.debug.xcconfig */;
+			baseConfigurationReference = FA11CCD8EB9EB39453E3C0AA /* Pods-CommonCircle-CommonCircleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CovidShieldTests/Info.plist;
+				INFOPLIST_FILE = CommonCircleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -466,17 +466,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidShield.app/CovidShield";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommonCircle.app/CommonCircle";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4340865F2E3AB248EDD2005B /* Pods-CovidShield-CovidShieldTests.release.xcconfig */;
+			baseConfigurationReference = 4340865F2E3AB248EDD2005B /* Pods-CommonCircle-CommonCircleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = CovidShieldTests/Info.plist;
+				INFOPLIST_FILE = CommonCircleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -486,7 +486,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidShield.app/CovidShield";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommonCircle.app/CommonCircle";
 			};
 			name = Release;
 		};
@@ -496,7 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = CovidShield/CovidShield.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CommonCircle/CommonCircle.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6WLJ9XN9DH;
 				ENABLE_BITCODE = NO;
@@ -504,7 +504,7 @@
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = CovidShield/Info.plist;
+				INFOPLIST_FILE = CommonCircle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -513,7 +513,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_IOS)";
-				PRODUCT_NAME = CovidShield;
+				PRODUCT_NAME = CommonCircle;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -526,10 +526,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = CovidShield/CovidShield.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CommonCircle/CommonCircle.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6WLJ9XN9DH;
-				INFOPLIST_FILE = CovidShield/Info.plist;
+				INFOPLIST_FILE = CommonCircle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -538,7 +538,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_IOS)";
-				PRODUCT_NAME = CovidShield;
+				PRODUCT_NAME = CommonCircle;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -546,7 +546,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D59BC3EC50A0ADA445499A7C /* Pods-CovidShield-tvOS.debug.xcconfig */;
+			baseConfigurationReference = D59BC3EC50A0ADA445499A7C /* Pods-CommonCircle-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -557,14 +557,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CovidShield-tvOS/Info.plist";
+				INFOPLIST_FILE = "CommonCircle-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CovidShield-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CommonCircle-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -574,7 +574,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7781F71836B103A188BA11A8 /* Pods-CovidShield-tvOS.release.xcconfig */;
+			baseConfigurationReference = 7781F71836B103A188BA11A8 /* Pods-CommonCircle-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -585,14 +585,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CovidShield-tvOS/Info.plist";
+				INFOPLIST_FILE = "CommonCircle-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CovidShield-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CommonCircle-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -602,7 +602,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3C62E531ADF4C4A8E004927 /* Pods-CovidShield-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = C3C62E531ADF4C4A8E004927 /* Pods-CommonCircle-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -612,24 +612,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CovidShield-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "CommonCircle-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CovidShield-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CommonCircle-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidShield-tvOS.app/CovidShield-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommonCircle-tvOS.app/CommonCircle-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8C6BC10F3A019B49411B60B /* Pods-CovidShield-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = C8C6BC10F3A019B49411B60B /* Pods-CommonCircle-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -639,17 +639,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CovidShield-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "CommonCircle-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CovidShield-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.CommonCircle-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidShield-tvOS.app/CovidShield-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommonCircle-tvOS.app/CommonCircle-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -770,7 +770,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CovidShieldTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CommonCircleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -779,7 +779,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CovidShield" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CommonCircle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -788,7 +788,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CovidShield-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CommonCircle-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -797,7 +797,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CovidShield-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CommonCircle-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -806,7 +806,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CovidShield" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CommonCircle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

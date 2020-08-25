@@ -1,6 +1,6 @@
 //
-//  CovidShield.h
-//  CovidShield
+//  CommonCircle.h
+//  CommonCircle
 //
 //  Created by Sergey Gavrilyuk on 2020-05-15.
 //
@@ -9,7 +9,7 @@
 #import <React/RCTBridgeModule.h>
 
 
-@interface CovidShield : NSObject<RCTBridgeModule>
+@interface CommonCircle : NSObject<RCTBridgeModule>
 
 @end
 

@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface CovidShieldTests : XCTestCase
+@interface CommonCircleTests : XCTestCase
 
 @end
 
-@implementation CovidShieldTests
+@implementation CommonCircleTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

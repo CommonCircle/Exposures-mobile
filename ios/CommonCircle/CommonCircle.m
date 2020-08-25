@@ -1,14 +1,14 @@
 //
-//  CovidShield.m
-//  CovidShield
+//  CommonCircle.m
+//  CommonCircle
 //
 //  Created by Sergey Gavrilyuk on 2020-05-15.
 //
 
-#import "CovidShield.h"
+#import "CommonCircle.h"
 #import <React/RCTConvert.h>
 
-@implementation CovidShield
+@implementation CommonCircle
 RCT_EXPORT_MODULE();
 
 RCT_REMAP_METHOD(getRandomBytes, randomBytesWithSize:(NSUInteger)size withResolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)

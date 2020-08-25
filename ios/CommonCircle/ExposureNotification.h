@@ -1,6 +1,6 @@
 //
 //  ExposureNotification.h
-//  CovidShield
+//  CommonCircle
 //
 //  Created by Sergey Gavrilyuk on 2020-05-03.
 //

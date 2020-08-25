@@ -1,15 +1,15 @@
-import {Buffer} from 'buffer';
+import { Buffer } from 'buffer';
 
 import hmac256 from 'crypto-js/hmac-sha256';
 import encHex from 'crypto-js/enc-hex';
-import {TemporaryExposureKey} from 'bridge/ExposureNotification';
+import { TemporaryExposureKey } from 'bridge/ExposureNotification';
 import nacl from 'tweetnacl';
-import {getRandomBytes, downloadDiagnosisKeysFile} from 'bridge/CovidShield';
-import {blobFetch} from 'shared/fetch';
-import {TRANSMISSION_RISK_LEVEL, REGION} from 'env';
+import { getRandomBytes, downloadDiagnosisKeysFile } from 'bridge/CommonCircle';
+import { blobFetch } from 'shared/fetch';
+import { TRANSMISSION_RISK_LEVEL, REGION } from 'env';
 
-import {covidshield} from './covidshield';
-import {BackendInterface, SubmissionKeySet} from './types';
+import { covidshield } from './covidshield';
+import { BackendInterface, SubmissionKeySet } from './types';
 
 const MAX_UPLOAD_KEYS = 14;
 
@@ -68,7 +68,7 @@ export class BackendService implements BackendInterface {
     const exposureKeys = filteredExposureKeys.slice(0, MAX_UPLOAD_KEYS);
 
     const upload = covidshield.Upload.create({
-      timestamp: {seconds: Math.floor(new Date().getTime() / 1000)},
+      timestamp: { seconds: Math.floor(new Date().getTime() / 1000) },
       keys: exposureKeys.map(key =>
         covidshield.TemporaryExposureKey.create({
           keyData: Buffer.from(key.keyData, 'base64'),
