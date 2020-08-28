@@ -1,8 +1,8 @@
-package app.covidshield.module
+package app.CommonCircle.module
 
 import android.content.Context
 import android.util.Base64
-import app.covidshield.extensions.launch
+import app.CommonCircle.extensions.launch
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
@@ -17,11 +17,11 @@ import java.security.SecureRandom
 import java.util.*
 import kotlin.coroutines.CoroutineContext
 
-class CovidShieldModule(context: ReactApplicationContext) : ReactContextBaseJavaModule(context), CoroutineScope {
+class CommonCircleModule(context: ReactApplicationContext) : ReactContextBaseJavaModule(context), CoroutineScope {
 
     private val okHttpClient by lazy { OkHttpClient() }
 
-    override fun getName(): String = "CovidShield"
+    override fun getName(): String = "CommonCircle"
 
     override val coroutineContext: CoroutineContext = Dispatchers.IO
 

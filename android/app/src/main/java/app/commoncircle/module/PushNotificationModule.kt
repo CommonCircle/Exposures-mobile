@@ -1,4 +1,4 @@
-package app.covidshield.module
+package app.CommonCircle.module
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -8,11 +8,11 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat.getSystemService
-import app.covidshield.MainActivity
-import app.covidshield.R
-import app.covidshield.extensions.launch
-import app.covidshield.extensions.parse
-import app.covidshield.extensions.toJson
+import app.CommonCircle.MainActivity
+import app.CommonCircle.R
+import app.CommonCircle.extensions.launch
+import app.CommonCircle.extensions.parse
+import app.CommonCircle.extensions.toJson
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
@@ -23,9 +23,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlin.coroutines.CoroutineContext
 
-private const val CHANNEL_ID = "CovidShield"
-private const val CHANNEL_NAME = "CovidShield"
-private const val CHANNEL_DESC = "CovidShield"
+private const val CHANNEL_ID = "CommonCircle"
+private const val CHANNEL_NAME = "CommonCircle"
+private const val CHANNEL_DESC = "CommonCircle"
 
 /**
  * See https://developer.android.com/training/notify-user/build-notification#kotlin
@@ -93,7 +93,7 @@ private class PushNotificationConfig(
     @SerializedName("priority") val _priority: Int?
 ) {
 
-    val uuid get() = _uuid ?: "app.covidshield.exposure-notification"
+    val uuid get() = _uuid ?: "app.CommonCircle.exposure-notification"
 
     val priority get() = _priority ?: NotificationCompat.PRIORITY_MAX
 }

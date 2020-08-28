@@ -1,4 +1,4 @@
-package app.covidshield.receiver
+package app.CommonCircle.receiver
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -8,7 +8,7 @@ import androidx.work.Data
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import app.covidshield.extensions.log
+import app.CommonCircle.extensions.log
 import com.facebook.react.ReactApplication
 import com.google.android.gms.nearby.exposurenotification.ExposureNotificationClient
 import com.google.android.gms.nearby.exposurenotification.ExposureNotificationClient.EXTRA_TOKEN

@@ -1,4 +1,4 @@
-package app.covidshield.models
+package app.CommonCircle.models
 
 import com.google.gson.annotations.SerializedName
 

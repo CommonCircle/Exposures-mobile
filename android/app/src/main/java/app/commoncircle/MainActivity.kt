@@ -1,8 +1,8 @@
-package app.covidshield
+package app.CommonCircle
 
 import android.content.Intent
 import android.os.Bundle
-import app.covidshield.utils.ActivityResultHelper
+import app.CommonCircle.utils.ActivityResultHelper
 import com.facebook.react.ReactActivity
 import org.devio.rn.splashscreen.SplashScreen
 

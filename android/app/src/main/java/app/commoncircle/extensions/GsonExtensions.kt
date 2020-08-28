@@ -1,4 +1,4 @@
-package app.covidshield.extensions
+package app.CommonCircle.extensions
 
 import com.google.gson.GsonBuilder
 

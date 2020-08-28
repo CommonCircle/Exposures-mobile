@@ -1,12 +1,12 @@
-package app.covidshield
+package app.CommonCircle
 
 import android.content.Intent
 import android.view.View
-import app.covidshield.module.CovidShieldModule
-import app.covidshield.module.ExposureNotificationModule
-import app.covidshield.module.PushNotificationModule
-import app.covidshield.receiver.ExposureNotificationBroadcastReceiver
-import app.covidshield.utils.ActivityResultHelper
+import app.CommonCircle.module.CommonCircleModule
+import app.CommonCircle.module.ExposureNotificationModule
+import app.CommonCircle.module.PushNotificationModule
+import app.CommonCircle.receiver.ExposureNotificationBroadcastReceiver
+import app.CommonCircle.utils.ActivityResultHelper
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
@@ -21,7 +21,7 @@ class CustomPackage : ReactPackage, ActivityResultHelper, ExposureNotificationBr
         val nativeModules = mutableListOf<NativeModule>(
             ExposureNotificationModule(reactContext),
             PushNotificationModule(reactContext),
-            CovidShieldModule(reactContext)
+            CommonCircleModule(reactContext)
         )
         this.nativeModules = nativeModules
         return nativeModules
