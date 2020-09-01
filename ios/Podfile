@@ -44,8 +44,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'CovidShield' do
-  # Pods for CovidShield
+target 'CommonCircle' do
+  # Pods for CommonCircle
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -95,7 +95,7 @@ target 'CovidShield' do
 
   pod 'RNLocalize', :path => '../node_modules/react-native-localize'
 
-  target 'CovidShieldTests' do
+  target 'CommonCircleTests' do
     inherit! :complete
     # Pods for testing
   end
