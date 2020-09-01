@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "CovidShield.app"
-               BlueprintName = "CovidShield"
-               ReferencedContainer = "container:CovidShield.xcodeproj">
+               BuildableName = "CommonCircle.app"
+               BlueprintName = "CommonCircle"
+               ReferencedContainer = "container:CommonCircle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "CovidShieldTests.xctest"
-               BlueprintName = "CovidShieldTests"
-               ReferencedContainer = "container:CovidShield.xcodeproj">
+               BuildableName = "CommonCircleTests.xctest"
+               BlueprintName = "CommonCircleTests"
+               ReferencedContainer = "container:CommonCircle.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CovidShield.app"
-            BlueprintName = "CovidShield"
-            ReferencedContainer = "container:CovidShield.xcodeproj">
+            BuildableName = "CommonCircle.app"
+            BlueprintName = "CommonCircle"
+            ReferencedContainer = "container:CommonCircle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CovidShield.app"
-            BlueprintName = "CovidShield"
-            ReferencedContainer = "container:CovidShield.xcodeproj">
+            BuildableName = "CommonCircle.app"
+            BlueprintName = "CommonCircle"
+            ReferencedContainer = "container:CommonCircle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
