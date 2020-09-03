@@ -9,7 +9,10 @@ import { BaseHomeView } from '../components/BaseHomeView';
 export const ExposureView = () => {
   const [i18n] = useI18n();
   const onAction = useCallback(() => {
-    Linking.openURL(i18n.translate('Home.GuidanceUrl')).catch(error => captureException('OpenUrl', error));
+    Linking.openURL(i18n.translate('Home.GuidanceUrl')).catch(err => console.error('An error occurred', err));
+  }, [i18n]);
+  const onGuidanceAction = useCallback(() => {
+    Linking.openURL(i18n.translate('Home.ExposureGuidanceUrl')).catch(err => console.error('An error occurred', err));
   }, [i18n]);
   return (
     <BaseHomeView>
@@ -20,6 +23,12 @@ export const ExposureView = () => {
       <Text variant="bodyText" color="bodyText" textAlign="center">
         {i18n.translate('Home.ExposureDetectedDetailed')}
       </Text>
+      <Box alignSelf="stretch" marginTop="l">
+        <Button text={i18n.translate('Home.ExposureGuidanceText')} color="bodyText" variant="bigHollow" externalLink onPress={onGuidanceAction} />
+      </Box>
+      <Box alignSelf="stretch" marginTop="l">
+        <Button text={i18n.translate('Home.SeeGuidance')} color="bodyText" variant="bigHollow" externalLink onPress={onAction} />
+      </Box>
       <LastCheckedDisplay />
     </BaseHomeView>
   );
