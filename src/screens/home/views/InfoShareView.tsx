@@ -1,16 +1,16 @@
-import React, {useCallback} from 'react';
-import {TouchableOpacity, TouchableOpacityProps, Linking} from 'react-native';
-import {Box, Text, Icon, IconProps} from 'components';
-import {useNavigation} from '@react-navigation/native';
-import {useI18n} from '@shopify/react-i18n';
-import {captureException} from 'shared/log';
+import React, { useCallback } from 'react';
+import { TouchableOpacity, TouchableOpacityProps, Linking } from 'react-native';
+import { Box, Text, Icon, IconProps } from 'components';
+import { useNavigation } from '@react-navigation/native';
+import { useI18n } from '@shopify/react-i18n';
+import { captureException } from 'shared/log';
 
 interface InfoShareItemProps extends TouchableOpacityProps {
   onPress: () => void;
   text: string;
   icon: IconProps['name'];
 }
-const InfoShareItem = ({onPress, text, icon, ...touchableProps}: InfoShareItemProps) => (
+const InfoShareItem = ({ onPress, text, icon, ...touchableProps }: InfoShareItemProps) => (
   <>
     <TouchableOpacity onPress={onPress} accessibilityRole="button" {...touchableProps}>
       <Box paddingVertical="s" flexDirection="row" alignContent="center" justifyContent="space-between">
@@ -50,9 +50,11 @@ export const InfoShareView = () => {
           accessibilityHint={i18n.translate('Home.ExternalLinkHint')}
         />
         <InfoShareItem onPress={onLearnMore} text={i18n.translate('Info.LearnMore')} icon="icon-chevron" />
-      </Box>
+        {/* </Box>
       <Box paddingHorizontal="m" borderRadius={10} backgroundColor="infoBlockNeutralBackground" marginTop="m">
+        {/*Commenting out the language selector until we get more languages.
         <InfoShareItem onPress={onLanguage} text={i18n.translate('Info.ChangeLanguage')} icon="icon-chevron" />
+        */}
         <InfoShareItem onPress={onPrivacy} text={i18n.translate('Info.Privacy')} icon="icon-chevron" />
       </Box>
     </>

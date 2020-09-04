@@ -4,6 +4,8 @@
     "NoExposureDetectedDetailed": "Selon vos identifiants aléatoires, au cours des 14 derniers jours, vous n'avez pas été à proximité d'une personne ayant reçu un résultat de test positif à la COVID-19.",
     "ExposureDetected": "Vous avez possiblement été exposé(e) à la COVID-19",
     "ExposureDetectedDetailed": "Selon vos identifiants aléatoires, au cours des 14 derniers jours, vous avez été à proximité d'une personne ayant reçu un résultat de test positif à la COVID-19.",
+    "ExposureGuidanceText": "Read information about next steps, support and available resources",
+    "ExposureGuidanceUrl": "https://commoncircle.us/resources",
     "SeeGuidance": "Lire les directives du Canada sur la COVID-19",
     "GuidanceUrl": "https://www.canada.ca/fr/sante-publique/services/publications/maladies-et-affections/covid-19-comment-isoler-chez-soi.html",
     "SignalDataShared": "Merci d'aider à ralentir la transmission",
