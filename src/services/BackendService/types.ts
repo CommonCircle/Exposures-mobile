@@ -12,3 +12,13 @@ export interface BackendInterface {
   retrieveDiagnosisKeys(period: number): Promise<string>;
   getExposureConfiguration(): Promise<ExposureConfiguration>;
 }
+
+// Key-server interface
+export interface KeyBackendInterface {
+
+}
+
+// Verification-server interface
+export interface VerificationBackendInterface {
+  verify(code: string): Promise<>;
+}
